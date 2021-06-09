@@ -25,6 +25,7 @@ Check For Free Vaccination Appointments
     Sleep    2s
     ${status}=  Run Keyword And Return Status    Page Should Not Contain     Valitsemallesi vastaanottajalle ei löytynyt vapaita aikoja.
     Run Keyword If    ${status} == True    Sleep    3600s
+    Run Keyword If    ${status} == False    Fail    msg="No vaccination appointments available."
 
 *** Keywords ***
 
